@@ -17,7 +17,7 @@ public class BuyTruck {
 
     BuyTruck(TrucksMarket trucksMarket)
     {
-        System.out.println("test");
+
 
     }
     @Autowired
