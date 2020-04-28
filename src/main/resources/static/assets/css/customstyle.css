@@ -1,0 +1,9 @@
+.rowTable {
+  cursor: pointer;
+}
+
+.rowTable:hover {
+  cursor: pointer;
+  background: #00a379;
+}
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>truckforwarderv3</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic"/>
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css"/>
+    <link rel="stylesheet" href="assets/css/customstyle.css"/>
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css"/>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <link rel="stylesheet" href="assets/css/untitled.css"/>
+</head>
+
+<body style="background-color: #90a4ae;color: rgb(0,0,0);">
+    <nav class="navbar navbar-dark navbar-expand-md bg-dark text-right shadow" style="height: 53px;background-color: #263238!important;">
+        <div class="container-fluid"><a class="navbar-brand" href="#">TruckForwarder</a><img src="assets/img/exit_to_app-24px.svg"></div>
+    </nav>
+    <div>
+        <ul class="nav nav-tabs" style="background-color: #37474f;">
+            <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#panel">Panel</a></li>
+            <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#zlecenia">Zlecenia</a></li>
+            <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#flota">Flota</a></li>
+            <li class="nav-item"><a class="nav-link active" role="tab" data-toggle="tab" href="#market">Market</a></li>
+            <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#pomoc">Pomoc</a></li>
+        </ul>
+        <div class="tab-content" style="height: 600px;">
+            <div class="tab-pane" role="tabpanel" id="panel">
+                <p>Content for tab 1.</p>
+            </div>
+            <div class="tab-pane" role="tabpanel" id="zlecenia">
+                <p>Content for tab 2.</p>
+            </div>
+            <div class="tab-pane" role="tabpanel" id="flota">
+                <p>Content for tab 3.</p>
+            </div>
+            <div class="tab-pane active" role="tabpanel" id="market">
+                <div class="modal fade" role="dialog" tabindex="-1" id="buyModal">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" style="color: rgb(184,184,184);">Czy chcesz zakupić wybrany pojazd?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                            <div class="modal-body">
+                                <p style="color: rgb(169,96,96);">Upewnij się, decyzji nie można cofnąć!</p>
+                            </div>
+
+                                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Anuluj</button><button class="btn btn-primary" id="buyButton" type="button">Kup</button>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead style="color: rgb(0,0,0);">
+                                                <tr>
+                                                    <th>Nazwa</th>
+                                                    <th>Ładowanie</th>
+                                                    <th>Długość</th>
+                                                    <th>Szerokość</th>
+                                                    <th>Wysokość</th>
+                                                    <th>Waga</th>
+                                                    <th>Pojemność</th>
+                                                    <th>Cena</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tableMarket" style="color: rgb(0,0,0);"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div><img id="truckImage"></div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <p id="truckDescription">Paragraph</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" role="tabpanel" id="pomoc">
+                <p>Content for tab 3.</p>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/datacontent.js"></script>
+    <script src="assets/js/logincontent.js"></script>
+</body>
+
+</html>
