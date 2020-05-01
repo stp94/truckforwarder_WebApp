@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 public class MarketController {
 
     @ResponseBody
-    @RequestMapping(value = "api/user/boughtTruck", method = RequestMethod.POST)
+    @RequestMapping(value = "api/user/boughtTruck", method = RequestMethod.GET)
 
     //test
 
@@ -19,7 +19,7 @@ public class MarketController {
     {
 
         System.out.println(boughtTruck);
-        return "boughTruck";
+        return "boughtTruck";
     }
 
 

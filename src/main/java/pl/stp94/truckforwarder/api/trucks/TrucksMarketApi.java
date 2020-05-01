@@ -46,10 +46,17 @@ public class TrucksMarketApi {
     }
 
     @GetMapping
+    @PostMapping("/add")
+
     public ITruck getByType(@RequestParam String truckType){
 
+
+        System.out.println(getByTypeMethod(truckType));
         return  getByTypeMethod(truckType);
     }
+
+
+
 
 
 

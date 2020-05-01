@@ -23,14 +23,12 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
         @Override
         protected void configure(HttpSecurity http) throws Exception {
-            http
-                    .headers().defaultsDisabled()
-                   .cacheControl();
+
 
             http
 
 
-                    .csrf().disable()
+
                     .authorizeRequests()
                     .antMatchers( "/controllers/","/home/", "/","/assets/img/**","/assets/css/**","/assets/js/**","/assets/fonts/**","/assets/bootstrap/**").permitAll()
                     .anyRequest().authenticated()
@@ -42,13 +40,6 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
                     .and()
                     .logout()
                     .permitAll();
-
-
-
-
-
-
-
         }
 
 

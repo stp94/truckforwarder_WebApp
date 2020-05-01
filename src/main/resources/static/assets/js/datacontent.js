@@ -12,20 +12,38 @@ var boughtTruck;
     function sendBoughtTruck() {
 
 
-        var obj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');
+
+        const paramElement = "/api/trucks/TrucksMarketApi?truckType=";
+
+        var urlTruck = paramElement+boughtTruck;
 
 
-        fetch("api/user/boughtTruck", {
-            method: "post",
-            body: obj
-        })
-            .then(res => res.json())
-            .then(res => {
-                console.log("Dodałem ciezarowke:");
-                console.log(res);
+
+
+        fetch(urlTruck)
+
+            .then((response) => {
+                return response.json();
             })
+            .then((data) => {
 
-    }
+                console.log(data)
+
+
+                })}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -37,16 +55,37 @@ var boughtTruck;
 
         if(x.rowIndex===1){
             buttonBuy.onclick = function(){sendBoughtTruck(); $('#buyModal').modal('hide');}
-            boughtTruck = "Tilt";
+            boughtTruck = "tiltTruck";
 
         }
 
         if(x.rowIndex===2){
             buttonBuy.onclick = function (){sendBoughtTruck(); $('#buyModal').modal('hide');}
-            boughtTruck = "Standard";
+            boughtTruck = "standardTruck";
 
 
             }
+
+        if(x.rowIndex===3){
+            buttonBuy.onclick = function (){sendBoughtTruck(); $('#buyModal').modal('hide');}
+            boughtTruck = "setTruck";
+
+
+        }
+
+        if(x.rowIndex===4){
+            buttonBuy.onclick = function (){sendBoughtTruck(); $('#buyModal').modal('hide');}
+            boughtTruck = "tankTruck";
+
+
+        }
+
+        if(x.rowIndex===5){
+            buttonBuy.onclick = function (){sendBoughtTruck(); $('#buyModal').modal('hide');}
+            boughtTruck = "tipperTruck";
+
+
+        }
         } // // this function informs about bought truck (post type to java-backend)
 
 

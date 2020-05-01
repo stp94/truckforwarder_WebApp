@@ -24,6 +24,8 @@ public class BuyTruck {
     protected ITruck BuyTiltTruck(TrucksMarket trucksMarket)
     {
         boughtTruck = trucksMarket.getTiltTruck();
+
+        System.out.println("kupilosie");
         return boughtTruck;
     }
 
